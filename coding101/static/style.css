@@ -16,3 +16,41 @@
 
     color: #214459;
 }
+.txt{
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+
+.listblock{
+    position: absolute;
+    width: 26%;
+    height: 1000px;
+    left: 0px;
+    top: 50px;
+
+    background: #214459;
+}
+.listtxt{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.chooseblock{
+    position: absolute;
+    width: 26%;
+    height: 1000px;
+    right:0px;
+    top: 50px;
+
+    background: #214459;
+}
+.choosetxt{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
