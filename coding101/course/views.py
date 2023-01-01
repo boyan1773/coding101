@@ -2,7 +2,7 @@ from django.shortcuts import render
 import pandas as pd
 # Create your views here.
 def course(request):
-    courselist = course
+    courselist = course_list()
     return render(request,'index.html',locals())
 
 def read_excel():
@@ -16,7 +16,7 @@ def read_excel():
         df_list.append(row_dict)
     return df_list
 
-def course():
+def course_list():
     courselist = []
     data=read_excel()
     data_len = len(data)
