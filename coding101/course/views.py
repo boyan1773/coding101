@@ -2,8 +2,7 @@ from django.shortcuts import render
 import pandas as pd
 # Create your views here.
 def course(request):
-    list=read_excel()
-    print(list)
+    courselist = course
     return render(request,'index.html',locals())
 
 def read_excel():
@@ -16,3 +15,13 @@ def read_excel():
         row_dict=data.loc[i,row_keys].to_dict()
         df_list.append(row_dict)
     return df_list
+
+def course():
+    courselist = []
+    data=read_excel()
+    data_len = len(data)
+    for i in range(1,data_len,1):
+        subject=data[i]['科目']
+        if subject not in courselist:
+            courselist.append(subject)
+    return courselist
